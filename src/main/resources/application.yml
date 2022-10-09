@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: VtbNewsApplication
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: false
+  jackson:
+    serialization:
+      indent_output: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/test2
+    username: postgres
+    password: 1234
+  jpa:
+    open-in-view: false
+    hibernate:
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+  messages:
+    cache-duration: 1
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: david.lacey@yandex.ru
+    password: ofbxumybvtpqdpnb
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      starttls.required: true
+      ssl.enable: true
+
+
+server:
+  servlet:
+    session:
+      cookie:
+        http-only: true
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
+    min-response-size: 1024
+
+logging:
+  file:
+    path: .
+    name: VtbNewsApplication.log

@@ -10,6 +10,17 @@ insert into roles values (1, 'COMMON', 'DSADAS', 'dsa', 'dsa');
 insert into roles values (2, 'ACCOUNTANT', 'DSADAS', 'dsa', 'dsa');
 insert into roles values (3, 'BUSINESS', 'DSADAS', 'dsa', 'dsa');
 
+
 мы не делали миграцию так как не успели(.
+
+**APIs**
+
+* /api/v1/auth/register
+* /api/v1/auth/activate?email=zhandos.abdireshov@gmail.com&code=HoSV2NS
+* /api/v1/auth/login?email=zhandos.abdireshov@gmail.com&password=11qwerty
+* /api/v1/article/download
+* /api/v1/article/findNews?page=0&size=10000
+
+
 
 если все успешно без ошибок запустилась. То это success!.
